@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电竞竞猜 · 稳定入口与平台说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f9fc;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a2e3c;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 开场白区域 — 故事感 + 稳定入口暗示 */
+        .opening {
+            background: linear-gradient(145deg, #e1f0f5 0%, #d0e6ee 100%);
+            padding: 2.2rem 1.8rem;
+            border-radius: 36px 36px 36px 12px;
+            margin-bottom: 2rem;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(30, 80, 100, 0.08);
+            border-left: 6px solid #0f8a8a;
+        }
+
+        .opening p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #14424f;
+            letter-spacing: 0.02em;
+        }
+
+        .opening strong {
+            color: #0b6a6a;
+            font-weight: 600;
+        }
+
+        /* 承接段落 — 简洁专业，高信息密度 */
+        .bridge {
+            background: #ffffff;
+            padding: 1.8rem 2rem;
+            border-radius: 28px;
+            margin-bottom: 2.4rem;
+            box-shadow: 0 2px 10px rgba(0,40,50,0.04);
+            border: 1px solid #d7e7ee;
+        }
+
+        .bridge p {
+            font-size: 1.05rem;
+            color: #1f3e4c;
+            margin-bottom: 0.8rem;
+        }
+
+        .bridge p:last-child {
+            margin-bottom: 0;
+        }
+
+        .accent-link {
+            color: #0a7f7f;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid #b8dbdb;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .accent-link:hover {
+            color: #065e5e;
+            border-bottom-color: #3fa0a0;
+        }
+
+        /* 特点网格卡片 — 蓝绿色点缀 */
+        .grid-card-set {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 1.5rem 1.2rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0, 60, 70, 0.04);
+            border: 1px solid #dae9f0;
+            transition: transform 0.1s ease, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .feature-card::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: #359f9f;
+            border-radius: 4px;
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #154450;
+            margin-bottom: 0.35rem;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-card p {
+            font-size: 0.92rem;
+            color: #2d5562;
+            line-height: 1.45;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 4px 18px rgba(20, 90, 100, 0.08);
+            border-color: #9ecfd0;
+        }
+
+        /* 温和结尾 — 引导感 */
+        .gentle-outro {
+            background: #daeef2;
+            padding: 1.6rem 2rem;
+            border-radius: 30px 30px 30px 8px;
+            margin-bottom: 1.5rem;
+            border-right: 4px solid #0b8787;
+        }
+
+        .gentle-outro p {
+            font-size: 1rem;
+            color: #10313d;
+        }
+
+        .gentle-outro .link-sentence {
+            margin-top: 0.6rem;
+            font-size: 1.05rem;
+        }
+
+        /* FAQ摘要 — 少量但有用 */
+        .faq-mini {
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.2rem 0 0.5rem;
+            border: 1px solid #c7dee5;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.6rem;
+            font-size: 0.92rem;
+        }
+
+        .faq-mini details:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #1b4b58;
+            cursor: pointer;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini summary:hover {
+            color: #0a6b6b;
+        }
+
+        .faq-mini details p {
+            margin-top: 0.3rem;
+            padding-left: 0.5rem;
+            color: #2c5b67;
+            border-left: 2px solid #73b9b9;
+            padding-left: 0.8rem;
+        }
+
+        /* 小型场景提示 — 增加信息密度 */
+        .scene-note {
+            font-size: 0.9rem;
+            background: #ecf5f7;
+            padding: 0.8rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            color: #1b4955;
+            margin-bottom: 1.2rem;
+            letter-spacing: 0.01em;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .opening {
+                padding: 1.6rem 1.2rem;
+                border-radius: 24px 24px 24px 10px;
+            }
+
+            .opening p {
+                font-size: 1.05rem;
+            }
+
+            .bridge {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .grid-card-set {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+
+            .feature-card {
+                padding: 1.2rem 1rem;
+            }
+
+            .gentle-outro {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .faq-mini {
+                padding: 1rem;
+            }
+
+            .scene-note {
+                font-size: 0.82rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* 细微额外点缀 */
+        .footnote {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6f8e98;
+            text-align: center;
+            border-top: 1px solid #cbdde3;
+            padding-top: 1.2rem;
+        }
+
+        .footnote span {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 — 故事感 + 稳定入口暗示 -->
+    <div class="opening">
+        <p>一个入口是否稳定，往往决定了体验的起点是否从容。<strong>电竞竞猜</strong>的页面结构，从一开始就围绕这一点展开。</p>
+    </div>
+
+    <!-- 承接段落：从平台说明和入口角度展开 -->
+    <div class="bridge">
+        <p>
+            无论你关注的是赛事资讯、实时数据，还是想了解社区讨论，<a href="https://m-esportsbet.com" class="accent-link">电竞竞猜</a> 
+            都作为信息与功能的交汇点而存在。页面布局围绕清晰路径设计，让每一步操作都有迹可循。
+        </p>
+        <p>
+            对于经常浏览的用户而言，减少不必要的跳转、保持核心入口的可见性，是提升效率的基础。这里没有冗余修饰，只有经过整理的导航逻辑。
+        </p>
+    </div>
+
+    <!-- 特点列表 — 网格卡片，蓝绿色点缀 -->
+    <div class="grid-card-set">
+        <div class="feature-card">
+            <h3>入口稳定</h3>
+            <p>主链接直接指向平台核心页，避免中间页或重定向干扰。每次加载路径一致，减少等待疑虑。</p>
+        </div>
+        <div class="feature-card">
+            <h3>信息分区</h3>
+            <p>赛事列表、数据板块、帮助区域各自独立，视觉上有明显分隔，适合快速定位。</p>
+        </div>
+        <div class="feature-card">
+            <h3>轻量结构</h3>
+            <p>前端资源经过优化，页面响应速度维持在合理区间。移动网络环境下也能保持基础可用性。</p>
+        </div>
+        <div class="feature-card">
+            <h3>说明前置</h3>
+            <p>功能与规则说明分布在页面自然位置，无需深层查找。新用户可较快建立使用预期。</p>
+        </div>
+    </div>
+
+    <!-- 场景提示小标签 — 增加真实感 -->
+    <div class="scene-note">
+        ⚡ 常用场景：赛前浏览、实时跟进、账户查看
+    </div>
+
+    <!-- 温和结尾 + 包含链接的自然句子（再次出现但不同句式） -->
+    <div class="gentle-outro">
+        <p>如果你正在寻找一个经过梳理的起点，不妨先从 <a href="https://m-esportsbet.com" class="accent-link">电竞竞猜</a> 的主页开始了解。页面信息层级清晰，入口直接，适合日常使用或初步探索。</p>
+        <div class="link-sentence">
+            <span style="background: #b6d9db40; padding:0.2rem 0.7rem; border-radius:30px; font-size:0.9rem;"> 指向稳定，结构明朗 </span>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 — 内容克制且有用 -->
+    <div class="faq-mini">
+        <details>
+            <summary>如何找到赛事日程？</summary>
+            <p>打开<a href="https://m-esportsbet.com" class="accent-link">电竞竞猜</a>后，顶部导航可直达「赛事」板块，列表按时间排序，延迟较低。</p>
+        </details>
+        <details>
+            <summary>移动端适配情况如何？</summary>
+            <p>页面采用响应式布局，屏幕宽度变化时卡片与文字自动调整，按钮间距也做了相应优化。</p>
+        </details>
+    </div>
+
+    <!-- 微小脚注 — 仅作为结尾装饰 -->
+    <div class="footnote">
+        <span>— 页面基于稳定入口与信息清晰原则叙述 —</span>
+    </div>
+
+</div>
+</body>
+</html>
